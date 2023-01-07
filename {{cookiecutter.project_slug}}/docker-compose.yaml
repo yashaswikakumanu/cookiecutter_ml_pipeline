@@ -15,11 +15,3 @@ services:
     image: mlflow
     ports:
       - 5000:5000
-  airflow:
-    image: puckel/docker-airflow
-    environment:
-      - EXECUTOR=Local
-    ports:
-      - 8080:8080
-    volumes:
-      - ./src/dags:/usr/local/airflow/dags
