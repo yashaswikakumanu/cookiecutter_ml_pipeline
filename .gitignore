@@ -40,5 +40,8 @@ ENV/
 env.bak/
 venv.bak/
 
+# mflow
+mlruns
+
 # List local files
 sample.py
