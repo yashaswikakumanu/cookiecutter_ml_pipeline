@@ -44,4 +44,4 @@ venv.bak/
 mlruns
 
 # List local files
-sample.py
+dummy*.py
