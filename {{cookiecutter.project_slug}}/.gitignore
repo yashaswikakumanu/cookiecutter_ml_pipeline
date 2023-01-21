@@ -25,7 +25,11 @@ coverage.xml
 
 
 # Sphinx documentation
-docs/_build/
+docs/_*/
+docs/make.bat
+docs/*.rst
+!docs/index.rst
+
 
 # VSCode settings
 .vscode
