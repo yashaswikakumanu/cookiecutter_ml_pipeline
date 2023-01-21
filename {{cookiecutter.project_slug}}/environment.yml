@@ -1,0 +1,11 @@
+name: mlops
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - fastapi
+  - mlflow
+  - pandas
+  - numpy
+  - scikit-learn
+  - pytest
