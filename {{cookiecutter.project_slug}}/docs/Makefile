@@ -15,13 +15,13 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-html:
+auto-rst:
+	sphinx-apidoc -o $(SOURCEDIR) ../src
+
+html: auto-rst
 	@$(SPHINXBUILD) -b html $(SOURCEDIR) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
-
-auto-rst:
-	sphinx-apidoc -o $(SOURCEDIR) ../src
 
 # Open the documentation in a web browser
 view:
