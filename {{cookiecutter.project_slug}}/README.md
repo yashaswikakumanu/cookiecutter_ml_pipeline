@@ -19,7 +19,7 @@
 1. Create a new Conda environment:
 
 ```bash
-conda env create -f environment.yml
+conda create -n mlops
 ```
 
 2. Activate the environment:
