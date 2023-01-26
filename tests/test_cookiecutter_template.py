@@ -38,7 +38,7 @@ def test_project_structure(project_directory):
 def test_required_files(project_directory):
     # Test that the required files exist
     assert os.path.isfile(os.path.join(project_directory, ".gitignore"))
-    assert os.path.isfile(os.path.join(project_directory, "environment.yaml"))
+    assert os.path.isfile(os.path.join(project_directory, "environment.yml"))
     assert os.path.isfile(os.path.join(project_directory, "Dockerfile"))
     assert os.path.isfile(os.path.join(project_directory, "Makefile"))
     assert os.path.isfile(os.path.join(project_directory, "README.md"))
