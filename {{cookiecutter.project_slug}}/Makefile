@@ -19,7 +19,7 @@ install:
 # pip install -r requirements.txt
 
 test:
-	@$(CONDA_ACTIVATE) $(CONDA_ENV);
+	@$(CONDA_ACTIVATE) $(CONDA_ENV) && \
 	pytest
 
 build:
