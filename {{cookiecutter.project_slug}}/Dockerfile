@@ -6,6 +6,10 @@ WORKDIR /app
 # Copy the code
 COPY . .
 
+# Install dependent libraries
+RUN apt-get update && \
+    apt-get install make
+
 # Create the environment
 RUN make install
 
