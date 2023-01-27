@@ -3,18 +3,11 @@ FROM continuumio/miniconda3
 # Set the working directory
 WORKDIR /app
 
-# Create the environment
-RUN conda create -n mlops -y python=3.10
-
-# Activate the environment
-SHELL ["conda", "run", "-n", "mlops", "/bin/bash", "-c"]
-
 # Copy the code
 COPY . .
 
-# Install the packages from the requirements file
-RUN conda activate mlops && \
-    pip install -r requirements.txt
+# Create the environment
+RUN make install
 
 # Expose the API port
 EXPOSE 8000
