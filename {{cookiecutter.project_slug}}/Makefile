@@ -3,9 +3,11 @@
 all: install test
 
 install:
-	conda env create -f environment.yaml
+	conda install make
+	conda config --add channels conda-forge
+	conda create -n mlops
 	conda activate mlops
-
+	pip install -r requirements.txt
 test:
 	pytest
 
