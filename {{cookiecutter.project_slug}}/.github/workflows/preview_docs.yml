@@ -7,7 +7,7 @@ on:
       - main
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  group: {% raw %}${{ github.workflow }}-${{ github.head_ref || github.run_id }}{% endraw %}
   cancel-in-progress: true
 
 jobs:
@@ -26,12 +26,12 @@ jobs:
     - name: Deploy documentation to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
         publish_dir: docs/_build
 
     - name: Comment on PR with deployment link
       uses: peter-evans/create-or-update-pull-request-comment@v2
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
       with:
-        body: "Documentation deployed to https://${{ env.GITHUB_ACTOR }}.github.io/${{ env.GITHUB_REPOSITORY }}/${{ env.GITHUB_HEAD_REF }}"
+        body: {% raw %}"Documentation deployed to https://${{ env.GITHUB_ACTOR }}.github.io/${{ env.GITHUB_REPOSITORY }}/${{ env.GITHUB_HEAD_REF }}"{% endraw %}
