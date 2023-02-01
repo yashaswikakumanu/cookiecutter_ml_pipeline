@@ -4,7 +4,7 @@ FROM continuumio/miniconda3
 WORKDIR /app
 
 # Create the environment
-RUN conda create -n mlops
+RUN conda create -n mlops python=3.10
 
 # Activate the environment
 SHELL ["conda", "run", "-n", "mlops", "/bin/bash", "-c"]
