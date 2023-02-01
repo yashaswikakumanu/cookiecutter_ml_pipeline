@@ -9,7 +9,7 @@ CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activ
 
 all: install test
 
-conda-pip:
+install:
 # create conda env from environemt.yml file
 	@echo "Creating conda environment for $(CONDA_ENV)..."
 	conda create -n $(CONDA_ENV) -y python=3.10
