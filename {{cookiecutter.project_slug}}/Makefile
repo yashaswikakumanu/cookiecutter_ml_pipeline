@@ -1,6 +1,5 @@
 CONDA_ENV=mlops
 # https://stackoverflow.com/questions/53382383/makefile-cant-use-conda-activate
-.ONESHELL:
 
 SHELL=/bin/bash
 CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate ; conda activate
