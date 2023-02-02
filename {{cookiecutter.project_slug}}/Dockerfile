@@ -1,19 +1,17 @@
-FROM python:3.10
+FROM continuumio/miniconda3
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the dependencies file
-COPY environment.yml .
-
-# Create the environment
-RUN conda env create -f environment.yml
-
-# Activate the environment
-SHELL ["conda", "run", "-n", "mlops", "/bin/bash", "-c"]
-
 # Copy the code
 COPY . .
+
+# Install dependent libraries
+RUN apt-get update && \
+    apt-get install make
+
+# Create the environment
+RUN make install
 
 # Expose the API port
 EXPOSE 8000

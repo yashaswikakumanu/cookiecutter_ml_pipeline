@@ -1,10 +1,23 @@
+
 # {{ cookiecutter.project_name }}
 {{ cookiecutter.project_short_description }}
 
+## Prerequisites
+
+1. Install make package
+
+```bash
+conda install make
+```
 
 ## Getting Started
 
-1. Install the dependencies: `make install`
+Navigate to Makefile directory and get started with below steps
+
+1. Install the dependencies and activate environment: \
+    `make install` \
+    `conda activate mlops` \
+    `pip install -r requirements.txt`
 2. Run the tests: `make test`
 3. Build the Docker image: `make build`
 4. Start the API server: `make up`
@@ -14,19 +27,6 @@
 - Python 3.10
 - Conda
 
-## Setup
-
-1. Create a new Conda environment:
-
-```bash
-conda create -n mlops
-```
-
-2. Activate the environment:
-
-```bash
-conda activate mlops
-```
 
 # Usage
 
@@ -111,3 +111,4 @@ The documentation will be built in the docs/_build/html directory.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
