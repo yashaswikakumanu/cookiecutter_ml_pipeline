@@ -13,10 +13,10 @@ conda install make
 
 Navigate to Makefile directory and get started with below steps
 
-1. Install the dependencies and activate environment: 
-    `make install`
-    `conda activate mlops`
-    `pip install -r requirements.txt`
+1. Install the dependencies and activate environment: \
+    `make install` \
+    `conda activate mlops` \
+    `pip install -r requirements.txt`\
 2. Run the tests: `make test`
 3. Build the Docker image: `make build`
 4. Start the API server: `make up`
