@@ -8,6 +8,7 @@ install:
 	conda create -n mlops
 	conda activate mlops
 	pip install -r requirements.txt
+
 test:
 	pytest
 
